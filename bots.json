@@ -1,0 +1,22 @@
+﻿[
+  {
+    "Type": "NoQuestion",
+    "Name": "Бот1",
+    "Token": "1014588195:AAEsv_pDfDzMV6oxuwXwsZU-KfvWw_LZyHk",
+    "Coordinates": {
+      "Latitude": 50.58048505266357,
+      "Longitude": 36.596409887320334
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Бот1",
+    "Token": "5524438661:AAEwwSezD9evLXJ9EN8pNkP9U_9pr4amOVU",
+    "Coordinates": {
+      "Latitude": 50.58048505266357,
+      "Longitude": 36.596409887320334
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  }
+]
