@@ -1,11 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿using ConsoleApp1.libs.LiftBots;
+using Newtonsoft.Json;
 using Telegram.Bot;
 using Telegram.Bot.Types;
-using static ConsoleApp1.BotInQuestion;
+using static ConsoleApp1.libs.LiftBots.BotInQuestion;
 
 namespace ConsoleApp1
 {
-	internal class Program
+    internal class Program
 	{
 
 		static void Main(string[] args)
