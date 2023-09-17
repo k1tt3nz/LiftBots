@@ -50,21 +50,26 @@ namespace ConsoleApp1.libs.LiftBots.MysteryBots
 		{
 			var userMsg = update.Message;
 			var chatID = update.Message.Chat.Id;
-			string botMsg = "Короче," + update.Message.Chat.FirstName + ", я тебя спас и в благородство играть не буду: отгадаешь для меня пару знаменитостей — " +
-				"и мы в расчете. Заодно посмотрим, как быстро у тебя башка после дистанционного обучения прояснится. " +
-				"А по твоей теме постараюсь разузнать. Хрен его знает, на кой ляд тебе эта Джиджи Томпсон сдался, но я в чужие дела не лезу, хочешь квестики выполнять, твои дела...";
-
+			string botMsg = "Давай думай)";
 			if (userMsg.Text.Contains("start"))
 			{
 				await botClient.SendTextMessageAsync(chatID, botMsg);
 				await botClient.SendPhotoAsync(
 					chatId: chatID,
-					photo: InputFile.FromUri("https://ya.ru/images/search?from=tabbar&img_url=https%3A%2F%2Fcdn.nur.kz%2Fimages%2F1120%2Fpogudx2u6fbe1b3pv.jpeg&lr=4&pos=0&rpt=simage&text=%D0%B1%D1%83%D0%B7%D0%BE%D0%B2%D0%B0"),
+					photo: InputFile.FromUri("https://github.com/k1tt3nz/LiftBots/blob/master/libs/LiftBots/MysteryBots/dRZ19Q-T2QA.jpg?raw=true"),
 					parseMode: ParseMode.Html
 				);
 			}
 
-			if (userMsg.Text != string.Empty)
+			if (userMsg.Text.ToLower().Contains("хакер"))
+			{
+				await botClient.SendTextMessageAsync(chatID, "\"Хакеры - современные цифровые археологи, раскрывающие тайны виртуальных миров и " +
+					"исследующие края интернета, которые остаются скрытыми от большинства.");
+				await botClient.SendTextMessageAsync(chatID, "А вот и твоя меточка, давай шуруй человек АХАХВ...ой...");
+				await botClient.SendLocationAsync(chatID, Coordinates.Latitude, Coordinates.Longitude);
+			}
+
+			if (userMsg.Text != string.Empty && userMsg.Text != "/start" && userMsg.Text != "хакер")
 			{
 				Random random = new Random();
 				await botClient.SendTextMessageAsync(chatID, ifWrongAnswer[random.Next(9)].ToString());

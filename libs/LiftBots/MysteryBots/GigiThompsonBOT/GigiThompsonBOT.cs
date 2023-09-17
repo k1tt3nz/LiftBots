@@ -99,7 +99,7 @@ namespace ConsoleApp1.libs.LiftBots.MysteryBots.GigiThompsonBOT
 			}
 
 
-			if (userMsg.Text != string.Empty)
+			if (userMsg.Text != string.Empty && userMsg.Text != "/start")
 			{
 				Random random = new Random();
 				await botClient.SendTextMessageAsync(chatID, ifWrongAnswer[random.Next(9)].ToString());
