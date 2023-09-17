@@ -11,16 +11,6 @@ namespace ConsoleApp1.libs.LiftBots.MysteryBots.GigiThompsonBOT
 {
     internal class GigiThompsonBOT : LiftBot
     {
-        private List<string> ifWrongAnswer = new List<string> { 
-            "Нет, это совершенно неверно.", 
-            "Попробуй ещё раз, твой ответ неправильный.",
-            "Увы, ты ошибся.",
-            "Это не то, что я ожидала услышать.",
-            "Правильный ответ звучит иначе.",
-		    "Ты в далеке от правильного ответа.",
-			"Ты не попал в цель, продолжай искать.",
-			"Неправильно, но это хорошая попытка.",
-		    "Этот ответ не соответствует действительности."}; 
 
         public GigiThompsonBOT(string type, string name, string token, Geolocation geolocation, string path2Text) : base(type, name, token, geolocation, path2Text) { }
         public GigiThompsonBOT(LiftBot bot) : base(bot) { }

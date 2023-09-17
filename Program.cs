@@ -74,6 +74,18 @@ namespace ConsoleApp1
 			AlexeiBelan alexeiBelan = new AlexeiBelan(botsQ[1]);
 			await alexeiBelan.Start();
 			await Console.Out.WriteLineAsync(") " + botsQ[1].Name + " запущен");
+
+			VladimirGorskov vladimir = new VladimirGorskov(botsQ[2]);
+			await vladimir.Start();
+			await Console.Out.WriteLineAsync(") " + botsQ[2].Name + " запущен");
+
+			SheldonGoldberg sheldon = new SheldonGoldberg(botsQ[3]);
+			await sheldon.Start();
+			await Console.Out.WriteLineAsync(") " + botsQ[3].Name + " запущен");
+
+			ElonMusk elonMusk = new ElonMusk(botsQ[4]);
+			await elonMusk.Start();
+			await Console.Out.WriteLineAsync(") " + botsQ[4].Name + " запущен");
 		}
 	}
 }

@@ -18,5 +18,35 @@
       "Longitude": 36.595666222168994
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\GigiThompsonBOT\\GigiThompsonBOT.txt"
+  },
+  {
+    "Type": "InQuestion",
+    "Name": "Владимир Горсков",
+    "Token": "6605307442:AAFCIAhLfRWstArQJcL3EpdLh5mGDpOpD2c",
+    "Coordinates": {
+      "Latitude": 50.58069122554429,
+      "Longitude": 36.59623010490467
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\GigiThompsonBOT\\GigiThompsonBOT.txt"
+  },
+  {
+    "Type": "InQuestion",
+    "Name": "Шшшшелдон Голдберг",
+    "Token": "6424324688:AAG3tvCONW29Hpfvjsk0DFPDNCJQUugi29A",
+    "Coordinates": {
+      "Latitude": 50.58183843963288,
+      "Longitude": 36.596543274340284
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\GigiThompsonBOT\\GigiThompsonBOT.txt"
+  },
+  {
+    "Type": "InQuestion",
+    "Name": "Илон Маск",
+    "Token": "6598740365:AAG26ILQ59XAMIaQoDHmWbt934-pzgD8690",
+    "Coordinates": {
+      "Latitude": 50.58183843963288,
+      "Longitude": 36.596543274340284
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\GigiThompsonBOT\\GigiThompsonBOT.txt"
   }
 ]
