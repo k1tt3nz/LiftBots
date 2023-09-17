@@ -54,8 +54,28 @@
     "Name": "Сой Порридж",
     "Token": "6362565996:AAEOzJu4Mt2NiaGlu6fcYNtg6wKSeRq_P_c",
     "Coordinates": {
-      "Latitude": 50.58183843963288,
-      "Longitude": 36.596543274340284
+      "Latitude": 50.582442335485055,
+      "Longitude": 36.595666222168994
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\GigiThompsonBOT\\GigiThompsonBOT.txt"
+  },
+  {
+    "Type": "InQuestion",
+    "Name": "Альберт Хьюз",
+    "Token": "6476063451:AAGG-d76VrJFdbcJiaUfrujlr-tB6hiaRpE",
+    "Coordinates": {
+      "Latitude": 50.580282115749625,
+      "Longitude": 36.59232618168367
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\GigiThompsonBOT\\GigiThompsonBOT.txt"
+  },
+  {
+    "Type": "InQuestion",
+    "Name": "Роботус",
+    "Token": "6395324526:AAEYbPrh6wRQFcyGORkNWLJn7qqcDwM3J60",
+    "Coordinates": {
+      "Latitude": 50.58193163792366,
+      "Longitude": 36.59414355370193
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\GigiThompsonBOT\\GigiThompsonBOT.txt"
   }

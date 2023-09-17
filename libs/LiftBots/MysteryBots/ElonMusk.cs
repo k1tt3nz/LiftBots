@@ -60,6 +60,12 @@ namespace ConsoleApp1.libs.LiftBots.MysteryBots
 			{
 				await botClient.SendTextMessageAsync(chatID, phrases[random.Next(9)]);
 			}
+
+			if (userMsg.Text.ToLower().Contains("ответ"))
+			{
+				await botClient.SendTextMessageAsync(chatID, "Они придут сюда без метки по заданию выше\r Лавочка возле бизнес инкубатора");
+				await botClient.SendLocationAsync(chatID, Coordinates.Latitude, Coordinates.Longitude);
+			}
 		}
 	}
 }

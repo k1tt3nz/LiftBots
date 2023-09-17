@@ -57,6 +57,12 @@ namespace ConsoleApp1.libs.LiftBots.MysteryBots
 			{
 				await botClient.SendTextMessageAsync(chatID, ifWrongAnswer[random.Next(9)].ToString());
 			}
+
+			if (userMsg.Text.ToLower().Contains("ответ"))
+			{
+				await botClient.SendTextMessageAsync(chatID, "\r Под переходом в ГУК");
+				await botClient.SendLocationAsync(chatID, Coordinates.Latitude, Coordinates.Longitude);
+			}
 		}
 	}
 }

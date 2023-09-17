@@ -1,10 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Telegram.Bot.Types.Enums;
+﻿using Telegram.Bot.Types.Enums;
 using Telegram.Bot.Types;
 using Telegram.Bot;
 
@@ -79,6 +73,12 @@ namespace ConsoleApp1.libs.LiftBots.MysteryBots
 			if (userMsg.Text != string.Empty && userMsg.Text != "/start" && userMsg.Text != "лифт")
 			{
 				await botClient.SendTextMessageAsync(chatID, ifWrongAnswer[random.Next(9)].ToString());
+			}
+
+			if (userMsg.Text.ToLower().Contains("ответ"))
+			{
+				await botClient.SendTextMessageAsync(chatID, "Дворик лаб корпуса");
+				await botClient.SendLocationAsync(chatID, Coordinates.Latitude, Coordinates.Longitude);
 			}
 		}
 	}

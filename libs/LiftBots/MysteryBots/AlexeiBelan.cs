@@ -74,6 +74,12 @@ namespace ConsoleApp1.libs.LiftBots.MysteryBots
 				Random random = new Random();
 				await botClient.SendTextMessageAsync(chatID, ifWrongAnswer[random.Next(9)].ToString());
 			}
+
+			if (userMsg.Text.ToLower().Contains("ответ"))
+			{
+				await botClient.SendTextMessageAsync(chatID, "СДК");
+				await botClient.SendLocationAsync(chatID, Coordinates.Latitude, Coordinates.Longitude);
+			}
 		}
 	}
 }

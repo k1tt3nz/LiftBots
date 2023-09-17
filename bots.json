@@ -34,8 +34,8 @@
     "Name": "Рэнд Ридли",
     "Token": "6443986104:AAFUxJhZAbfI1dd8cOWs8mjq5aAWxWP99Eg",
     "Coordinates": {
-      "Latitude": 50.58084099862488,
-      "Longitude": 36.59683659578031
+      "Latitude": 50.580575386718465,
+      "Longitude": 36.5961274836532
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   },
@@ -91,16 +91,6 @@
   },
   {
     "Type": "NoQuestion",
-    "Name": "Наталья Романов",
-    "Token": "6586206746:AAFVxl4zxeKe7XCEWlnETIShp_qHi7XdsYQ",
-    "Coordinates": {
-      "Latitude": 50.57996885219511,
-      "Longitude": 36.594556310810844
-    },
-    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
-  },
-  {
-    "Type": "NoQuestion",
     "Name": "Леон Харрисон",
     "Token": "6616925435:AAF-5EMbo3QeCht5ktzbOhn3fsKt_BsK3LI",
     "Coordinates": {
@@ -114,8 +104,8 @@
     "Name": "Братья Богдановы",
     "Token": "6475543103:AAGY0DgpnqDc4FOMrLSNqG1Yl5CcagHMEVA",
     "Coordinates": {
-      "Latitude": 50.58063124240886,
-      "Longitude": 36.593051066372986
+      "Latitude": 50.581868955810336,
+      "Longitude": 36.59372232126379
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   },
@@ -146,6 +136,16 @@
     "Coordinates": {
       "Latitude": 50.579611196017915,
       "Longitude": 36.59448608824419
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Наталья Романов",
+    "Token": "6586206746:AAFVxl4zxeKe7XCEWlnETIShp_qHi7XdsYQ",
+    "Coordinates": {
+      "Latitude": 50.57996885219511,
+      "Longitude": 36.594556310810844
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   }

@@ -68,28 +68,37 @@ namespace ConsoleApp1
 
 			LiftBot[] botsQ = JsonConvert.DeserializeObject<LiftBot[]>(text, settings);
 			GigiThompsonBOT gigiThompsonBOT = new GigiThompsonBOT(botsQ[0]);
+			
 			await gigiThompsonBOT.Start();
-			await Console.Out.WriteLineAsync(") " + botsQ[0].Name + " запущен");
+			await Console.Out.WriteLineAsync(16 + ") " + botsQ[0].Name + " запущен");
 
 			AlexeiBelan alexeiBelan = new AlexeiBelan(botsQ[1]);
 			await alexeiBelan.Start();
-			await Console.Out.WriteLineAsync(") " + botsQ[1].Name + " запущен");
+			await Console.Out.WriteLineAsync(17 + ") " + botsQ[1].Name + " запущен");
 
 			VladimirGorskov vladimir = new VladimirGorskov(botsQ[2]);
 			await vladimir.Start();
-			await Console.Out.WriteLineAsync(") " + botsQ[2].Name + " запущен");
+			await Console.Out.WriteLineAsync(18 + ") " + botsQ[2].Name + " запущен");
 
 			SheldonGoldberg sheldon = new SheldonGoldberg(botsQ[3]);
 			await sheldon.Start();
-			await Console.Out.WriteLineAsync(") " + botsQ[3].Name + " запущен");
+			await Console.Out.WriteLineAsync(19 + ") " + botsQ[3].Name + " запущен");
 
 			ElonMusk elonMusk = new ElonMusk(botsQ[4]);
 			await elonMusk.Start();
-			await Console.Out.WriteLineAsync(") " + botsQ[4].Name + " запущен");
+			await Console.Out.WriteLineAsync(20 + ") " + botsQ[4].Name + " запущен");
 
-			SoyPorridge soyPorridge = new SoyPorridge(botsQ[4]);
+			SoyPorridge soyPorridge = new SoyPorridge(botsQ[5]);
 			await soyPorridge.Start();
-			await Console.Out.WriteLineAsync(") " + botsQ[4].Name + " запущен");
+			await Console.Out.WriteLineAsync(21 + ") " + botsQ[5].Name + " запущен");
+
+			AlbertHughes albertHughes = new AlbertHughes(botsQ[6]);
+			await albertHughes.Start();
+			await Console.Out.WriteLineAsync(22 + ") " + botsQ[6].Name + " запущен");
+
+			Robotus robotus = new Robotus(botsQ[7]);
+			await robotus.Start();
+			await Console.Out.WriteLineAsync(23 + ") " + botsQ[7].Name + " запущен");
 		}
 	}
 }
