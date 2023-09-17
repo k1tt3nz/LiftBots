@@ -17,9 +17,10 @@ namespace ConsoleApp1.libs.LiftBots
         {
             var userMsg = update.Message;
             var chatID = update.Message.Chat.Id;
-            if (userMsg != null)
+            string botMsg = ReadBotTextFile();
+            if (userMsg.Text != "start")
             {
-                await botClient.SendTextMessageAsync(chatID, chatID.ToString());
+                await botClient.SendTextMessageAsync(chatID, botMsg);
                 await botClient.SendLocationAsync(chatID, Coordinates.Latitude, Coordinates.Longitude);
             }
         }

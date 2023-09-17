@@ -20,6 +20,15 @@ namespace ConsoleApp1.libs.LiftBots
             Path2Text = path2Text;
         }
 
+        public LiftBot(LiftBot bot)
+        {
+			Type = bot.Type;
+			Name = bot.Name;
+			Token = bot.Token;
+			Coordinates = bot.Coordinates;
+			Path2Text = bot.Path2Text;
+		}
+
         public abstract Task Start();
         public abstract Task Update(ITelegramBotClient botClient, Update update, CancellationToken token);
         public abstract Task Error(ITelegramBotClient botClient, Exception exception, CancellationToken token);

@@ -3,7 +3,7 @@ using Telegram.Bot.Types;
 
 namespace ConsoleApp1.libs.LiftBots
 {
-	public class BotInQuestion : LiftBot
+	public partial class BotInQuestion : LiftBot
     {
         public BotInQuestion(string type, string name, string token, Geolocation geolocation, string path2Text) : base(type, name, token, geolocation, path2Text) { }
 
@@ -27,30 +27,16 @@ namespace ConsoleApp1.libs.LiftBots
             Client.StartReceiving(Update, Error);
         }
 
-        public override Task Update(ITelegramBotClient botClient, Update update, CancellationToken token)
+        public override async Task Update(ITelegramBotClient botClient, Update update, CancellationToken token)
         {
-            throw new NotImplementedException();
-        }
-
-        public abstract class BotCreator
-        {
-            public abstract LiftBot Create(string type, string name, string token, Geolocation geolocation, string path2Text);
-        }
-
-        public class BotNoQuestionCreator : BotCreator
-        {
-            public override LiftBot Create(string type, string name, string token, Geolocation geolocation, string path2Text)
-            {
-                return new BotNoQuestion(type, name, token, geolocation, path2Text);
-            }
-        }
-
-        public class BotInQuestionCreator : BotCreator
-        {
-            public override LiftBot Create(string type, string name, string token, Geolocation geolocation, string path2Text)
-            {
-                return new BotInQuestion(type, name, token, geolocation, path2Text);
-            }
-        }
+			var userMsg = update.Message;
+			var chatID = update.Message.Chat.Id;
+			string botMsg = ReadBotTextFile();
+			if (userMsg.Text != "start")
+			{
+				await botClient.SendTextMessageAsync(chatID, "Бот с вопросом");
+				await botClient.SendLocationAsync(chatID, Coordinates.Latitude, Coordinates.Longitude);
+			}
+		}
     }
 }

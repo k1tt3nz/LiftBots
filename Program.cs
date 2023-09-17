@@ -1,7 +1,7 @@
 ﻿using ConsoleApp1.libs.LiftBots;
+using ConsoleApp1.libs.LiftBots.MysteryBots;
+using ConsoleApp1.libs.LiftBots.MysteryBots.GigiThompsonBOT;
 using Newtonsoft.Json;
-using Telegram.Bot;
-using Telegram.Bot.Types;
 using static ConsoleApp1.libs.LiftBots.BotInQuestion;
 
 namespace ConsoleApp1
@@ -11,52 +11,10 @@ namespace ConsoleApp1
 
 		static void Main(string[] args)
 		{
-			//int[] a = { 1, 2 };
-			//List<IProduct> list = new List<IProduct>();
-			//foreach (int i in a)
-			//{
-			//	if(i == 1)
-			//	{
-			//		IProduct product = new CreatorA().FactoryMethod("asd", 1);
-			//		list.Add(product);
-			//	}
-			//	else
-			//	{
-			//		IProduct product = new CreatorB().FactoryMethod("qwe", 2);
-			//		list.Add(product);
-			//	}
-			//}
-
-			//foreach (IProduct product in list)
-			//{
-			//	product.PrintType();
-			//}
-
-			//var settings = new JsonSerializerSettings();
-			//settings.Converters.Add(new ProductConverter());
-
-			//IProduct product1 = new CreatorA().FactoryMethod("asd", 1);
-			//IProduct product2 = new CreatorB().FactoryMethod("asd", 2);
-			//List<IProduct> list = new List<IProduct>
-			//{
-			//	product1,
-			//	product2
-			//};
-			
-			//string jsonStr = JsonConvert.SerializeObject(list);
-   //         Console.WriteLine(jsonStr);
-
-			//List<Product> products = JsonConvert.DeserializeObject<List<Product>>(jsonStr,settings);
-   //         foreach(IProduct product in products)
-			//{
-			//	product.PrintType();
-			//}
-
-
-            //Console.WriteLine(products);
 
 			StartBots();
 			//test();
+
             Console.ReadKey();
 
         }
@@ -95,11 +53,27 @@ namespace ConsoleApp1
 			settings.Converters.Add(new LiftBotConverter());
 
 			LiftBot[] bots = JsonConvert.DeserializeObject<LiftBot[]>(text,settings);
-
-			for(int i = 0; i < bots.Length; i++)
+			Console.ForegroundColor = ConsoleColor.Green;
+			for (int i = 0; i < bots.Length; i++)
 			{
 				await bots[i].Start();
+                await Console.Out.WriteLineAsync(i+1 + ") " + bots[i].Name + " запущен");
+            }
+
+			pathJson = "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\InQuestion.json";
+			using (StreamReader reader = new StreamReader(pathJson))
+			{
+				text = reader.ReadToEnd();
 			}
-        }
+
+			LiftBot[] botsQ = JsonConvert.DeserializeObject<LiftBot[]>(text, settings);
+			GigiThompsonBOT gigiThompsonBOT = new GigiThompsonBOT(botsQ[0]);
+			await gigiThompsonBOT.Start();
+			await Console.Out.WriteLineAsync(") " + botsQ[0].Name + " запущен");
+
+			AlexeiBelan alexeiBelan = new AlexeiBelan(botsQ[1]);
+			await alexeiBelan.Start();
+			await Console.Out.WriteLineAsync(") " + botsQ[1].Name + " запущен");
+		}
 	}
 }

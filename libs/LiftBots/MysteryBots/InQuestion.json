@@ -1,0 +1,22 @@
+﻿[
+  {
+    "Type": "InQuestion",
+    "Name": "Джиджи Томпсон",
+    "Token": "6534576442:AAGQEKIWOo-4a3w6CMu2vJcEVi9nn38cFl8",
+    "Coordinates": {
+      "Latitude": 50.582003057759046,
+      "Longitude": 36.59493236918078
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\GigiThompsonBOT\\GigiThompsonBOT.txt"
+  },
+  {
+    "Type": "InQuestion",
+    "Name": "Алексей Белан",
+    "Token": "6657579639:AAHypNaZqw6moMYm2FXfPW_6N7MKF5f3PyU",
+    "Coordinates": {
+      "Latitude": 50.582442335485055,
+      "Longitude": 36.595666222168994
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\GigiThompsonBOT\\GigiThompsonBOT.txt"
+  }
+]

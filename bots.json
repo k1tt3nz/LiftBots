@@ -1,21 +1,151 @@
 ﻿[
   {
     "Type": "NoQuestion",
-    "Name": "Бот1",
-    "Token": "1014588195:AAEsv_pDfDzMV6oxuwXwsZU-KfvWw_LZyHk",
+    "Name": "Элизабет Шепард",
+    "Token": "6327805099:AAEPgjGyNBhDc-L-lBG9SSqcWw1ZrYr6YA0",
     "Coordinates": {
-      "Latitude": 50.58048505266357,
-      "Longitude": 36.596409887320334
+      "Latitude": 50.582442335485055,
+      "Longitude": 36.595666222168994
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   },
   {
     "Type": "NoQuestion",
-    "Name": "Бот1",
-    "Token": "5524438661:AAEwwSezD9evLXJ9EN8pNkP9U_9pr4amOVU",
+    "Name": "Эйден Пирс",
+    "Token": "6355904545:AAFV8l7RtE97ju00pKX_9abMefR3OwuHmjw",
     "Coordinates": {
-      "Latitude": 50.58048505266357,
-      "Longitude": 36.596409887320334
+      "Latitude": 50.58226545219117,
+      "Longitude": 36.59491459110796
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Адам Вейсгаупт",
+    "Token": "6588221589:AAGrxQOYVv67p3lpoXqoPD2FEtPUpHP9F-8",
+    "Coordinates": {
+      "Latitude": 50.58226545219117,
+      "Longitude": 36.59491459110796
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Рэнд Ридли",
+    "Token": "6443986104:AAFUxJhZAbfI1dd8cOWs8mjq5aAWxWP99Eg",
+    "Coordinates": {
+      "Latitude": 50.58084099862488,
+      "Longitude": 36.59683659578031
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Оливер Торнтон",
+    "Token": "6661633026:AAGD1i2MWVHFuhv58mUoYvo7I6dDLRTrAYQ",
+    "Coordinates": {
+      "Latitude": 50.58022151408338,
+      "Longitude": 36.594210459539134
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Майкл Бриггс",
+    "Token": "6649781389:AAFfViZYJX7KBrCBsUom-AkbBp7i6zz-A0E",
+    "Coordinates": {
+      "Latitude": 50.58199749516826,
+      "Longitude": 36.5953523827861
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Криспин Пайк",
+    "Token": "6513730456:AAH50fW9ZLl9cfPRafcYcc2o413EVho0F9s",
+    "Coordinates": {
+      "Latitude": 50.58226545219117,
+      "Longitude": 36.59491459110796
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "K-pop",
+    "Token": "6375169344:AAGfU_d2gXp7oy-wE7BqsEOufUhwPtIBip0",
+    "Coordinates": {
+      "Latitude": 50.58008518135784,
+      "Longitude": 36.595754149847
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Брэтт Хенд",
+    "Token": "6246648690:AAHkmtWnx2uSRUWMPCAULmf9d8JEm2XfTSk",
+    "Coordinates": {
+      "Latitude": 50.58074682752891,
+      "Longitude": 36.59442067873455
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Наталья Романов",
+    "Token": "6586206746:AAFVxl4zxeKe7XCEWlnETIShp_qHi7XdsYQ",
+    "Coordinates": {
+      "Latitude": 50.57996885219511,
+      "Longitude": 36.594556310810844
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Леон Харрисон",
+    "Token": "6616925435:AAF-5EMbo3QeCht5ktzbOhn3fsKt_BsK3LI",
+    "Coordinates": {
+      "Latitude": 50.58063124240886,
+      "Longitude": 36.593051066372986
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Братья Богдановы",
+    "Token": "6475543103:AAGY0DgpnqDc4FOMrLSNqG1Yl5CcagHMEVA",
+    "Coordinates": {
+      "Latitude": 50.58063124240886,
+      "Longitude": 36.593051066372986
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Амелия Санни",
+    "Token": "5935475169:AAGOUrUoGLL2vOIj4qxQWro_kENQkEoCx6Y",
+    "Coordinates": {
+      "Latitude": 50.581610235083744,
+      "Longitude": 36.59410276980166
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Стейси Харт",
+    "Token": "6076609312:AAH_Sl9g4eNcejOWaxvT8QZNh8o8E4VpaWw",
+    "Coordinates": {
+      "Latitude": 50.579611196017915,
+      "Longitude": 36.59448608824419
+    },
+    "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
+  },
+  {
+    "Type": "NoQuestion",
+    "Name": "Николаев Тимофей",
+    "Token": "6565799074:AAGqNCe8TKM2Ar63TLVNMRpT2OCGHLWTbYw",
+    "Coordinates": {
+      "Latitude": 50.579611196017915,
+      "Longitude": 36.59448608824419
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   }
