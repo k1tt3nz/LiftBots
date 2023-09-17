@@ -86,6 +86,10 @@ namespace ConsoleApp1
 			ElonMusk elonMusk = new ElonMusk(botsQ[4]);
 			await elonMusk.Start();
 			await Console.Out.WriteLineAsync(") " + botsQ[4].Name + " запущен");
+
+			SoyPorridge soyPorridge = new SoyPorridge(botsQ[4]);
+			await soyPorridge.Start();
+			await Console.Out.WriteLineAsync(") " + botsQ[4].Name + " запущен");
 		}
 	}
 }
