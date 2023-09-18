@@ -2,103 +2,108 @@
 using ConsoleApp1.libs.LiftBots.MysteryBots;
 using ConsoleApp1.libs.LiftBots.MysteryBots.GigiThompsonBOT;
 using Newtonsoft.Json;
-using static ConsoleApp1.libs.LiftBots.BotInQuestion;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ConsoleApp1
 {
     internal class Program
 	{
+		private static readonly string BotJsonPath = "F:\\Programming\\VS repos\\ConsoleApp1\\bots.json";
+		private static readonly string MysteryBotsJsonPath = "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\InQuestion.json";
 
-		static void Main(string[] args)
+		private static async Task Main(string[] args)
 		{
-
 			StartBots();
-			//test();
-
-            Console.ReadKey();
-
-        }
-
-		static void A()
-		{
-		Console.ReadKey();
+			while (true)
+			{ }
 		}
 
-		static void test()
+		private static async void StartBots()
 		{
-			var coordinates = new Geolocation(50.58048505266357, 36.596409887320334);
-			var token = "1014588195:AAEsv_pDfDzMV6oxuwXwsZU-KfvWw_LZyHk";
-			var path = "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt";
-			LiftBot bot = new BotNoQuestionCreator().Create("NoQuestion", "Бот1", token, coordinates, path);
-			LiftBot bot2 = new BotInQuestionCreator().Create("NoQuestion", "Бот1", "5524438661:AAEwwSezD9evLXJ9EN8pNkP9U_9pr4amOVU", coordinates, path);
-			//bot.Start();
-			LiftBot[] bots = { bot, bot2 };
-			var jsonStr = JsonConvert.SerializeObject(bots);
-            Console.WriteLine(jsonStr);
-            Console.ReadLine();
-		}
-
-		static async void StartBots()
-		{
-			string pathJson = "F:\\Programming\\VS repos\\ConsoleApp1\\bots.json";
-
-			string text;
-			using (StreamReader reader = new StreamReader(pathJson))
-			{
-				text = reader.ReadToEnd();
-			}
-
 
 			var settings = new JsonSerializerSettings();
 			settings.Converters.Add(new LiftBotConverter());
 
-			LiftBot[] bots = JsonConvert.DeserializeObject<LiftBot[]>(text,settings);
+			string botJson;
+			using (StreamReader reader = new StreamReader(BotJsonPath))
+			{
+				botJson = reader.ReadToEnd();
+			}
+
+
+			LiftBot[] bots = JsonConvert.DeserializeObject<LiftBot[]>(botJson,settings);
 			Console.ForegroundColor = ConsoleColor.Green;
 			for (int i = 0; i < bots.Length; i++)
 			{
 				await bots[i].Start();
-                await Console.Out.WriteLineAsync(i+1 + ") " + bots[i].Name + " запущен");
-            }
-
-			pathJson = "F:\\Programming\\VS repos\\ConsoleApp1\\libs\\LiftBots\\MysteryBots\\InQuestion.json";
-			using (StreamReader reader = new StreamReader(pathJson))
-			{
-				text = reader.ReadToEnd();
+				await Console.Out.WriteLineAsync($"{i + 1}) {bots[i].Name} запущен");
 			}
 
-			LiftBot[] botsQ = JsonConvert.DeserializeObject<LiftBot[]>(text, settings);
-			GigiThompsonBOT gigiThompsonBOT = new GigiThompsonBOT(botsQ[0]);
-			
-			await gigiThompsonBOT.Start();
-			await Console.Out.WriteLineAsync(16 + ") " + botsQ[0].Name + " запущен");
+			string mysteryBotsJson;
+			using (StreamReader reader = new StreamReader(MysteryBotsJsonPath))
+			{
+				mysteryBotsJson = reader.ReadToEnd();
+			}
 
-			AlexeiBelan alexeiBelan = new AlexeiBelan(botsQ[1]);
-			await alexeiBelan.Start();
-			await Console.Out.WriteLineAsync(17 + ") " + botsQ[1].Name + " запущен");
 
-			VladimirGorskov vladimir = new VladimirGorskov(botsQ[2]);
-			await vladimir.Start();
-			await Console.Out.WriteLineAsync(18 + ") " + botsQ[2].Name + " запущен");
+			LiftBot[] botsQ = JsonConvert.DeserializeObject<LiftBot[]>(mysteryBotsJson, settings);
 
-			SheldonGoldberg sheldon = new SheldonGoldberg(botsQ[3]);
-			await sheldon.Start();
-			await Console.Out.WriteLineAsync(19 + ") " + botsQ[3].Name + " запущен");
+			var botCreators = new Func<LiftBot, Task>[]
+			{
+				bot => new GigiThompsonBOT(bot).Start(),
+				bot => new AlexeiBelan(bot).Start(),
+				bot => new VladimirGorskov(bot).Start(),
+				bot => new SheldonGoldberg(bot).Start(),
+				bot => new ElonMusk(bot).Start(),
+				bot => new SoyPorridge(bot).Start(),
+				bot => new AlbertHughes(bot).Start(),
+				bot => new Robotus(bot).Start()
+			};
 
-			ElonMusk elonMusk = new ElonMusk(botsQ[4]);
-			await elonMusk.Start();
-			await Console.Out.WriteLineAsync(20 + ") " + botsQ[4].Name + " запущен");
+			for (int i = 0; i < botCreators.Length; i++)
+			{
+				await botCreators[i](botsQ[i]);
+				await Console.Out.WriteLineAsync($"{i + 16}) {botsQ[i].Name} запущен");
+			}
 
-			SoyPorridge soyPorridge = new SoyPorridge(botsQ[5]);
-			await soyPorridge.Start();
-			await Console.Out.WriteLineAsync(21 + ") " + botsQ[5].Name + " запущен");
 
-			AlbertHughes albertHughes = new AlbertHughes(botsQ[6]);
-			await albertHughes.Start();
-			await Console.Out.WriteLineAsync(22 + ") " + botsQ[6].Name + " запущен");
 
-			Robotus robotus = new Robotus(botsQ[7]);
-			await robotus.Start();
-			await Console.Out.WriteLineAsync(23 + ") " + botsQ[7].Name + " запущен");
+
+
+			//LiftBot[] botsQuest = JsonConvert.DeserializeObject<LiftBot[]>(mysteryBotsJson, settings);
+
+			//GigiThompsonBOT gigiThompsonBOT = new GigiThompsonBOT(botsQuest[0]);
+			//await gigiThompsonBOT.Start();
+			//await Console.Out.WriteLineAsync(16 + ") " + botsQuest[0].Name + " запущен");
+
+			//AlexeiBelan alexeiBelan = new AlexeiBelan(botsQuest[1]);
+			//await alexeiBelan.Start();
+			//await Console.Out.WriteLineAsync(17 + ") " + botsQuest[1].Name + " запущен");
+
+			//VladimirGorskov vladimir = new VladimirGorskov(botsQuest[2]);
+			//await vladimir.Start();
+			//await Console.Out.WriteLineAsync(18 + ") " + botsQuest[2].Name + " запущен");
+
+			//SheldonGoldberg sheldon = new SheldonGoldberg(botsQuest[3]);
+			//await sheldon.Start();
+			//await Console.Out.WriteLineAsync(19 + ") " + botsQuest[3].Name + " запущен");
+
+			//ElonMusk elonMusk = new ElonMusk(botsQuest[4]);
+			//await elonMusk.Start();
+			//await Console.Out.WriteLineAsync(20 + ") " + botsQuest[4].Name + " запущен");
+
+			//SoyPorridge soyPorridge = new SoyPorridge(botsQuest[5]);
+			//await soyPorridge.Start();
+			//await Console.Out.WriteLineAsync(21 + ") " + botsQuest[5].Name + " запущен");
+
+			//AlbertHughes albertHughes = new AlbertHughes(botsQuest[6]);
+			//await albertHughes.Start();
+			//await Console.Out.WriteLineAsync(22 + ") " + botsQuest[6].Name + " запущен");
+
+			//Robotus robotus = new Robotus(botsQuest[7]);
+			//await robotus.Start();
+			//await Console.Out.WriteLineAsync(23 + ") " + botsQuest[7].Name + " запущен");
+
 		}
 	}
 }
