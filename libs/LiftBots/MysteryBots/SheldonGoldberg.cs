@@ -46,14 +46,14 @@ namespace ConsoleApp1.libs.LiftBots.MysteryBots
 				await botClient.SendTextMessageAsync(chatID, botMsg);
 			}
 
-			if (userMsg.Text.ToLower().Contains("марк цукенберг"))
+			if (userMsg.Text.ToLower().Contains("цукенберг") || userMsg.Text.ToLower().Contains("цукерберг"))
 			{
 				await botClient.SendTextMessageAsync(chatID, "А вы способнее чем я предпологала.");
 				await botClient.SendTextMessageAsync(chatID, issueTag[random.Next(9)]);
 				await botClient.SendLocationAsync(chatID, Coordinates.Latitude, Coordinates.Longitude);
 			}
 
-			if (userMsg.Text != string.Empty && userMsg.Text != "/start" && userMsg.Text.ToLower() != "Марк Цукенберг".ToLower())
+			if (userMsg.Text != string.Empty && userMsg.Text != "/start" && !userMsg.Text.ToLower().Contains("цукерберг"))
 			{
 				await botClient.SendTextMessageAsync(chatID, ifWrongAnswer[random.Next(9)].ToString());
 			}

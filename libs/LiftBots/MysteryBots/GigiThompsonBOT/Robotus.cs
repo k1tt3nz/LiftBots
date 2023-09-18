@@ -38,22 +38,32 @@ namespace ConsoleApp1.libs.LiftBots.MysteryBots.GigiThompsonBOT
 			var userMsg = update.Message;
 			var chatID = update.Message.Chat.Id;
 			Random random = new Random();
-			string botMsg = "Есть начальная точка с которой команда начинает идти к этапу ориентируясь по компасу (в любом телефоне он есть) " +
-				"\r\nНаправление и кол-во метров и снова пока не дойдут (Ща пойду координаты строить)";
+			string botMsg = "Йо-хо-хо и ящик микросхем!\n" +
+				"Сейчас вы отправитесь в путешествие по-нашему исследовательскому кампусу.";
+
+			string questStr = "Ты отыщи огромный куб посередь площади,\r\n" +
+				"На кубе том в углу ты метку (XATEM 2015) рассмотри,\r\n" +
+				"И от угла ступай ты прямо до угла (190град) УК4,\r\n" +
+				"А от угла ступай по красной ты дорого, \r\n" +
+				"Где на конце найдешь тропу (северо-запад),\r\n" +
+				"По ней иди ты, огибая всякий дом,\r\n" +
+				"Но не сходя с пути.\r\n" +
+				"В конце пути – увидишь белый мрамор, \r\n" +
+				"К нему придя, взгляни в окно из камня\r\n" +
+				"Там буду я.\r\n";
 
 			if (userMsg.Text.Contains("start"))
 			{
 				await botClient.SendTextMessageAsync(chatID, botMsg);
-			}
+				await botClient.SendTextMessageAsync(chatID, questStr);
 
-			if (userMsg.Text != string.Empty && userMsg.Text != "/start")
-			{
-				await botClient.SendTextMessageAsync(chatID, phrases[random.Next(9)]);
-			}
+				Thread.Sleep(5000);
 
-			if (userMsg.Text.ToLower().Contains("ответ"))
-			{
-				await botClient.SendTextMessageAsync(chatID, "Они придут сюда без метки по заданию выше");
+				await botClient.SendTextMessageAsync(chatID, "Ах да, никаких подсказок не ждите и даже не надейтесь на чью-либо помощь. " +
+					"У вас есть только ВЫ! А я пока пойду посмотрю новую часть Пиратов Карибского моря. УДАЧИ)))");
+
+				Thread.Sleep(5000);
+				await botClient.SendTextMessageAsync(chatID, "Надесь, вы уже додумалсь и смогл найти этап, иначе вот вам метка...");
 				await botClient.SendLocationAsync(chatID, Coordinates.Latitude, Coordinates.Longitude);
 			}
 		}

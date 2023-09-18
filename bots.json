@@ -74,8 +74,8 @@
     "Name": "K-pop",
     "Token": "6605045104:AAFsXnml5gy5Uz4S2GY_-dXKHd6CDeijbmc",
     "Coordinates": {
-      "Latitude": 50.58008518135784,
-      "Longitude": 36.595754149847
+      "Latitude": 50.58257206919852,
+      "Longitude": 36.59499675121217
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   },
@@ -84,8 +84,8 @@
     "Name": "Брэтт Хенд",
     "Token": "6246648690:AAHkmtWnx2uSRUWMPCAULmf9d8JEm2XfTSk",
     "Coordinates": {
-      "Latitude": 50.58074682752891,
-      "Longitude": 36.59442067873455
+      "Latitude": 50.58062693957724,
+      "Longitude": 36.59410709474425
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   },
@@ -104,8 +104,8 @@
     "Name": "Братья Богдановы",
     "Token": "6475543103:AAGY0DgpnqDc4FOMrLSNqG1Yl5CcagHMEVA",
     "Coordinates": {
-      "Latitude": 50.581868955810336,
-      "Longitude": 36.59372232126379
+      "Latitude": 50.581813054733956,
+      "Longitude": 36.593804594481156
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   },
@@ -124,28 +124,28 @@
     "Name": "Стейси Харт",
     "Token": "6076609312:AAH_Sl9g4eNcejOWaxvT8QZNh8o8E4VpaWw",
     "Coordinates": {
-      "Latitude": 50.579611196017915,
-      "Longitude": 36.59448608824419
+      "Latitude": 50.58071685253623,
+      "Longitude": 36.59435524082055
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   },
   {
     "Type": "NoQuestion",
     "Name": "Николаев Тимофей",
-    "Token": "6565799074:AAGqNCe8TKM2Ar63TLVNMRpT2OCGHLWTbYw",
+    "Token": "6059320948:AAGDg4UT6OMhtmtuR6MR76htf8UDQnw0IyM",
     "Coordinates": {
-      "Latitude": 50.579611196017915,
-      "Longitude": 36.59448608824419
+      "Latitude": 50.57953532963753,
+      "Longitude": 36.59372470553819
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   },
   {
     "Type": "NoQuestion",
     "Name": "Наталья Романов",
-    "Token": "6521107187:AAEs71KXxqgJZ9Qbtlc-JAqmOXfd6S0pZzs",
+    "Token": "6440628847:AAF8Jx8OkKanaULjVDgr9Qx9KpFjzus39_4",
     "Coordinates": {
-      "Latitude": 50.57996885219511,
-      "Longitude": 36.594556310810844
+      "Latitude": 50.58040905776938,
+      "Longitude": 36.594749704029354
     },
     "Path2Text": "F:\\Programming\\VS repos\\ConsoleApp1\\txt\\text.txt"
   }
